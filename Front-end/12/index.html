@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<ul id="list">
+    <li >Element 1</li>
+    <li>Element 2</li>
+    <li style="color: green">Element 3</li>
+    <li style="color: green">Element 4</li>
+    <li>Element 5</li>
+    <li style="color: green">Element 6</li>
+    <li style="color: green">Element 7</li>
+    <li style="color: green">Element 8</li>
+    <li>Element 9</li>
+    <li style="color: green">Element 10</li>
+
+</ul>
+
+<script>
+
+    var span = document.createElement('span'),
+        p = document.createElement('p'),
+        li = document.getElementsByTagName('li'),
+        document = document.body.li,
+        i,
+        len = li.length,
+        elements = document.querySelectorAll('ul > li');
+    for(i = 0; i < len; i+=1) {
+//        for(var i = 0; i < li.length; i++) {
+//            elements[i].innerHTML;
+//        }
+        if(li[i].hasAttribute("style")) {
+            li.innerHTML = $("<span>" + 'This is span' /*elements[i]*/+ "</span>").insertAfter(li[i]);
+        } else {
+            li.innerHTML = $("<p>" + 'This is p' /*elements[i]*/ + "</p>").insertAfter(li[i]);
+        }
+    }
+
+</script>
+</body>
+</html>
